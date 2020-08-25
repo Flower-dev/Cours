@@ -253,6 +253,7 @@ parmi les autres mots clés pour les fonctions de temporisation, on peut trouver
 quand aucune fonction de timing par défaut ne correspond à l’animation, il est possible de créer ses propres courbes d’animation personnalisée à l’aide de la fonction `cubic-bezier()` ;
 il existe des outils pour ajuster les effets de timing avec la fonction `cubic-bezier()`.
 
+# PARTIE 2 :
 
 Les animations correspondent à des successions d'images -->  Frames Per Second (FPS)
 Pour info : Les images par seconde, ou FPS, représentent le nombre d’images individuelles affichées en une seconde. Plus les FPS sont élevées, plus le mouvement paraît fluide.
@@ -268,3 +269,28 @@ Pour passer des codes CSS et HTML… à une page web, le navigateur passe par pl
 3- Paint (peinture) : le navigateur transforme les éléments en pixels en utilisant les styles de l’étape 1, et les positions et dimensions déduites de l’étape 2.
 
 4- Composition : le navigateur combine tous les éléments pour composer la page qui s’affiche dans le navigateur.
+
+*En résumé :*
+- à l'écran, il n'y a pas de véritable mouvement, mais une succession d'images s'enchaînant suffisamment rapidement pour être interprétées par notre cerveau comme du mouvement ;
+- cette succession d'images s'appelle les FPS (Frame Per Second, ce qui signifie images par seconde) ;
+- plus le FPS est élevé, plus l'animation est fluide ;
+- le taux d’images par seconde idéal est 60 FPS ;
+- pour assurer la fluidité des animations, il faut se contenter d’animer des propriétés de l’étape composition. Les plus utiles sont  `transform` et `opacity`
+
+Autour de la propriété `transform`
+
+La propriété `transform` permet de manipuler et animer des sites de presque toutes les manières.
+- Il est possible de déplacer des éléments avec les fonctions `translate :`   `translate()`,  `translateX()`,  `translateY()`  et  `translate3d()`;
+- Il est possible d'agrandir avec les fonctions scale :  `scale()`,   `scaleX()`,  `scaleY()`  et  `scale3d()`;
+- Pour faire pivoter un élément, il faut utiliser les fonctions rotate :  `rotate()`,  `rotateX()`,  `rotateY()` et  `rotateZ()`;
+- Lorsque l'on ajoute une deuxième propriété `transform`, cette dernière annule la première. On ne peut donc définir qu’une seule propriété  `transform` dans un même sélecteur.
+- Pour effectuer plusieurs transformations, il est possible de les lister dans une même propriété `transform` comme par exemple :
+
+```SCSS
+transform:translateX(200%) scale(2);
+```
+
+**Important** : une propriété avec plusieurs fonctions exécute les fonctions dans l’ordre, de droite à gauche ;
+- Les fonctions de transformations en 3D comme `translate3d()`,  `rotateZ()`  et  `scale3d()` ont également besoin de la fonction `perspective` pour indiquer au navigateur la distance à laquelle l'utilisateur se trouve : plus la distance est grande, moins l'animation sera marquée.
+
+- `transform-origin` permet de repositionner le point d’ancrage, qui se trouve par défaut au centre de l’élément. Il est possible de régler ce point d’origine en utilisant des unités comme px, rem, vh, etc. ou encore des pourcentages pour X et Y. Toutefois, il est également possible d'utiliser des mots clés tels que : `left`  et `right`  pour l’axe X,  `top` et  `bottom`  pour l’axe Y, et  `center` pour les deux.
