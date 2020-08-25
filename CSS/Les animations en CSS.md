@@ -252,3 +252,19 @@ si aucune fonction de timing n’est indiquée, la transition utilisera la fonct
 parmi les autres mots clés pour les fonctions de temporisation, on peut trouver `ease-in`,   `ease-out`,`ease-in-out`, et `linear`;
 quand aucune fonction de timing par défaut ne correspond à l’animation, il est possible de créer ses propres courbes d’animation personnalisée à l’aide de la fonction `cubic-bezier()` ;
 il existe des outils pour ajuster les effets de timing avec la fonction `cubic-bezier()`.
+
+
+Les animations correspondent à des successions d'images -->  Frames Per Second (FPS)
+Pour info : Les images par seconde, ou FPS, représentent le nombre d’images individuelles affichées en une seconde. Plus les FPS sont élevées, plus le mouvement paraît fluide.
+
+**comment le navigateur passe des codes HTML et CSS à une page web ?**
+
+Pour passer des codes CSS et HTML… à une page web, le navigateur passe par plusieurs étapes pour afficher une page. Voici les étapes qui nous intéressent pour le rendu de nos animations :
+
+1- Style : le navigateur reçoit le code HTML. Il va l'interpréter pour comprendre la structure du DOM (Document Object Model). Ainsi, pour chaque balise HTML, il crée un élément du DOM, un peu comme un arbre de nœuds. Il parcourt ensuite le CSS, et détermine quelles règles s’appliquent à quels éléments. À partir de là, il va créer la structure qui s'affichera.
+
+2- Layout (mise en page) : maintenant que le navigateur connaît les styles et les éléments à afficher, il détermine la taille des éléments et où les placer.
+
+3- Paint (peinture) : le navigateur transforme les éléments en pixels en utilisant les styles de l’étape 1, et les positions et dimensions déduites de l’étape 2.
+
+4- Composition : le navigateur combine tous les éléments pour composer la page qui s’affiche dans le navigateur.
