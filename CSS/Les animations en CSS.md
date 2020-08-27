@@ -294,3 +294,13 @@ transform:translateX(200%) scale(2);
 - Les fonctions de transformations en 3D comme `translate3d()`,  `rotateZ()`  et  `scale3d()` ont également besoin de la fonction `perspective` pour indiquer au navigateur la distance à laquelle l'utilisateur se trouve : plus la distance est grande, moins l'animation sera marquée.
 
 - `transform-origin` permet de repositionner le point d’ancrage, qui se trouve par défaut au centre de l’élément. Il est possible de régler ce point d’origine en utilisant des unités comme px, rem, vh, etc. ou encore des pourcentages pour X et Y. Toutefois, il est également possible d'utiliser des mots clés tels que : `left`  et `right`  pour l’axe X,  `top` et  `bottom`  pour l’axe Y, et  `center` pour les deux.
+
+Pour changer la couleur d'un élément et le rendre un peu plus interactif (chose essentielle lorsque l'on parle d'expérience utilisateur) il est possible d'utiliser la propriété `opacity`
+
+Pour éviter d’avoir à ajouter des  `<div>`  supplémentaires dans le HTML, on peut utiliser les pseudoéléments  `::before` ou  `::after `
+
+Pour créer un pseudoélément, il faut ajouter le nom du pseudoélément à un sélecteur, en utilisant le préfixe double deux-points `:  .selector::after{...}`
+
+Les pseudoéléments   `::before` et  `::after` créent un élément qui est respectivement le premier ou le dernier enfant de l’élément sélectionné
+
+Il est possible de créer des dégradés de couleur. Il suffit d'attribuer un dégradé au `background-color` de l'élément d'arrière-plan. Il faut ensuite faire disparaître l'élément superposé avec opacity: 0.
