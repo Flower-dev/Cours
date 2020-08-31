@@ -183,3 +183,105 @@ let myBook = {
     isAvailable: true
 };
 ```
+
+Une fois qu'un objet = enregistré dans 1 variable, il est possible d'avoir accès à ses données en utilisant le nom de la variable, un point (`.`) et enfin le nom de la clef que l'on souhaite récupérer :
+
+```js
+let myBook = {
+    title: "The Story of JS",
+    author: "J. Doe",
+    numberOfPages: 300,
+    isAvailable: true
+};
+
+let bookTitle = myBook.title;  // "The Story of JS"
+let bookPages = myBook.numberOfPages  // 300
+```
+
+**LES CLASSES**
+
+1 classe = 1 modèle pour 1 objet dans le code & permet de construire +sieurs obj du même type (*instances*)
+
+Voici un exemple de classe :
+
+```js
+class Book {
+    constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+}
+```
+
+Maintenant que la classe = créée , il est possible de créer des instances avec le mot clef `new`
+
+```js
+let myBook = new Book("The Story of JS", "J. Doe", 300);
+```
+
+ce qui va créer l'objet :
+
+```js
+{
+    title: "The Story of JS",
+    author: "J.Doe",
+    pages: 300
+}
+```
+
+## Les array ou tableaux
+
+Pour créer un tableau, il faut utiliser des crochets `[]` comme par exemple :
+
+```js
+let guests = ["Sarah Kate", "Audrey Simon", "Will Alexander"];
+```
+
+Il est possible d'accéder aux différents éléments d'un tableau en utilisant les indices (ces derniers démarrent à 0)
+
+```js
+let firstGuest = guests[0]; // "Sarah Kate"
+let thirdGuest = guests[2]; // "Will Alexander"
+let undefinedGuest = guests[12] // undefined
+```
+
+:warning:
+En JavaScript, les types primitifs tels que les nombres, les valeurs logiques et les chaînes sont passés par **valeur**. A l'inverse, les objets et les tableaux sont passés par **références**.
+:warning:
+
+La propriété `length`indique le nombre d'élément que contient un tableau
+
+exemple :
+```js
+let guests = ["Jon Doe", "Sarah Kate", "Audrey Simon"];
+
+let howManyGuests = guests.length; // 3
+```
+
+:warning: ne pas oublier `.` avant `length` pour accéder à la propriété
+
+
+Pour ajouter un élément dans un tableau, il faut utiliser la propriété `.push` (l'élément se trouvera à la fin du tableau) ou `.unshift`(l'élément se trouvera en haut du tableau)
+
+exemples :
+```js
+guests.push("Tao Perkington"); // ajoute "Tao Perkington" à la fin de notre tableau guests
+```
+
+ou
+
+```js
+guests.unshift("Tao Perkington"); // "Tao Perkington" est ajouté au début du tableau guests
+```
+
+pour supprimer 1 élément, il faut utiliser la propriété `pop`sans passer aucun argument
+
+exemple :
+
+```js
+guests.pop(); // supprimer le dernier élément du tableau
+```
+
+- Un **set** = liste non ordonnée
+- Une **map** = liste ordonnée de paires clefs/valeurs 
