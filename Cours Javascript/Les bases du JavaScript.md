@@ -1,5 +1,7 @@
 # LES BASES DU JAVASCRIPT
 
+:warning: version de JavaScript utilisée : ES6
+
 ## Qu'est ce qu'une variable ?
 
 Les variables permettent d'enregistrer & de manipuler des données. Il est possible de comparer une variable à un contenant.
@@ -33,3 +35,151 @@ let numberOfDogs = 4;
 ```
 
 Dans les deux lignes de codes ci-dessus, la convention de nommage utilisée =  **camel case**.
+
+### Comment modifier la valeur d'une variable ?
+
+La manière la plus simple = la réaffecter, exemple :
+
+```js
+let numberOfCats = 2;
+
+numberOfCats = 4;
+```
+en faisant cela on ne peut pas faire grand-chose ... Il faut donc utiliser des **opérateurs**
+
+Les opérateurs arithmétiques permettent de faire des opérations mathématiques de bases (addition, soustraction, multiplication & division)
+
+**LES ADDITIONS & SOUSTRACTIONS**
+
+Pour ajouter deux variables entre elles, il faut utiliser le signe `+`
+
+```js
+let totalCDs = 67;
+
+let totalVinyls = 34;
+
+let totalMusic = totalCDs + totalVinyls;
+```
+
+A l'inverse pour les soustraire, il faut utiliser le signe `-`
+
+```js
+let cookiesInJar = 10;
+let cookiesRemoved = 2;
+ 
+let cookiesLeftInJar = cookiesInJar - cookiesRemoved;
+```
+
+Pour ajouter ou soustraire un nombre d'une variable, il est possible d'utiliser les opérateurs `+=` & `-=` ce qui donne :
+
+```js
+let cookiesInJar = 10;
+
+/* manger deux cookies */
+cookiesInJar -= 2;  //il reste 8 cookies
+
+/* cuisson d'un nouveau lot de cookies */
+cookiesInJar += 12; // il y a maintenant 20 cookies dans la boîte
+```
+
+Il est également possible d'utiliser les opérateurs `++` & `--` pour ajouter ou soustraire 1 (incrément ou décrément)
+
+```js
+let numberOfLikes = 10;
+
+numberOfLikes++;  // cela fait 11
+
+numberOfLikes--; // et on revient à 10...
+```
+
+**LES MULTIPLICATIONS & LES DIVISIONS**
+
+Pour faire des multiplications & des divisions il faut utiliser les opérateurs `*` & `/`
+
+exemple :
+
+```js
+let costPerProduct = 20;
+let numberOfProducts = 5;
+
+let totalCost = costPerProduct * numberOfProducts;
+
+let averageCostPerProduct = totalCost / numberOfProducts;
+```
+
+Tout comme pour les additions & les soustractions, il existe les opérateurs `*=` & `/=` pour multiplier ou diviser un nombre :
+
+```js
+let numberOfCats = 2;
+
+numberOfCats *= 6;  // numberOfCats vaut maintenant 2*6 = 12; 
+
+numberOfCats /= 3;  // numberOfCats vaut maintenant 12/3 = 4;
+```
+
+### Qu'est ce qu'une constante ?
+
+Certaines données (nom d'une entreprise, date de naissance d'un utilisateur ...) ne doivent pas être modifiées durant l'exécution d'un programme, il faut donc les assigner à des constantes pour ne pas leur réaffecter de nouvelles valeurs.
+
+Pour créer une constante, il faut commencer par la déclarer en utilisant le mot clef *const* suivi du nom de la constante.
+
+Exemple :
+
+```js
+const hoursPerDay = 24;
+const minutesPerHour = 60;
+const secondsPerMinute = 60;
+```
+
+### Qu'est ce qu'un type ?
+
+Le **type** d'une variable ou d'une constante = le genre des données qu'elle enregistre.  En JavaScript, il y a trois types primitifs (= les briques de base de chaque structure de données en JavaScript) principaux :
+
+- number (nombre)
+- string (chaîne de caractères)
+- boolean (valeur logique)
+
+Les variables de type `number` peuvent être positives, négatives, entières (integers) ou bien décimales (loating-point pour nombre à virgule)
+
+:warning: L'arithmétique en virgule flottante peut déclencher des erreurs :warning:
+
+Les valeurs logiques (booleans) = les + simples car elles ne peuvent avoir que 2 valeurs `true` ou `false`
+
+exemple :
+
+```js
+let userIsSignedIn = true;
+let userIsAdmin = false;
+```
+
+Les chaînes de caractères ou *strings* permettent d'enregistrer du texte dans des variables en utilisant les guillemets simples ou doubles
+
+exemple :
+
+```js
+let firstName = "Will";
+let lastName = 'Alexander';
+```
+
+Il est possible de concaténer des chaînes de caractères en utilisant l'opérateur `+`
+
+```js
+let wholeName = firstName + " " + lastName;  // valeur: "Will Alexander"
+```
+
+:warning: Faire attention aux types des variables & privilégier au maximum les constantes quand cela = possible :warning:
+
+## Les objets & les classes
+
+Les objets en JavaScript = écrits en **JSON** (JavaScript Object Notation) --> séries de paires **clefs/valeurs** séparées par des `,` les tout mis entre `{}`
+
+Il est possible d'enregistrer des objets dans des variables :
+
+```js
+let myBook = {
+    title: 'The Story of JS',
+    author: 'J. Doe',
+    numberOfPages: 300,
+    isAvailable: true
+};
+```
