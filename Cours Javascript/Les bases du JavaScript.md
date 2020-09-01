@@ -284,4 +284,36 @@ guests.pop(); // supprimer le dernier élément du tableau
 ```
 
 - Un **set** = liste non ordonnée
-- Une **map** = liste ordonnée de paires clefs/valeurs 
+- Une **map** = liste ordonnée de paires clefs/valeurs
+
+Le JavaScript fonctionne dans différents environnements comme par exemple le JSBin, les environnements web et les serveurs ....
+
+
+## Les instructions If & Else
+
+Les instructions If/Else sont des instructions conditionnelles
+
+Si on utilise des `boolean`simple, il faut utiliser cette syntaxe :
+
+```js
+if (myBoolean) {
+    // réaction à la valeur vraie de myBoolean
+} else {
+    // réaction à la valeur faux de myBoolean
+}
+```
+
+donc pour vérifier qu'un utilisateur est connecté il faut écrire ce morceau de code :
+
+```js
+let userLoggedIn = true;
+
+if (userLoggedIn) {
+    console.log("Utilisateur connecté!");
+} else {
+    console.log("Alerte, intrus!");
+}
+```
+
+
+Avec If & Else, il est possible d'utiliser des expressions de comparaison afin de comparer deux valeurs comme par exemple : 
