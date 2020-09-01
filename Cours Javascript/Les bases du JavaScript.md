@@ -316,4 +316,45 @@ if (userLoggedIn) {
 ```
 
 
-Avec If & Else, il est possible d'utiliser des expressions de comparaison afin de comparer deux valeurs comme par exemple : 
+Avec If & Else, il est possible d'utiliser des expressions de comparaison afin de comparer deux valeurs comme par exemple :
+
+- `<` inférieur à ;
+- `<=`inférieur ou égal à ;
+- `==`égal à ;
+- `>=`supérieur ou égal à ;
+- `>` supérieur à ;
+- `!=`différent de.
+
+Ce qui donne :
+
+```js
+const numberOfSeats = 30;
+let numberOfGuests = 25;
+
+if (numberOfGuests < numberOfSeats) {
+    // autoriser plus d'invités
+} else {
+    // ne pas autoriser de nouveaux invités
+}
+```
+Il est possible de chaîner des instructions `If`/`Else` pour réagir à des conditions potentielles multiples :
+
+```js
+if (numberOfGuests == numberOfSeats) {
+    // tous les sièges sont occupés
+} else if (numberOfGuests < numberOfSeats) {
+    // autoriser plus d'invités
+} else {
+    // ne pas autoriser de nouveaux invités
+}
+```
+
+En JavaScript, toutes les égalités ne sont pas nées égales :
+
+Il y a 2 façons de vérifier si 2 valeurs sont égales en JavaScript :  `==` et  `===`, aussi appelées égalité simple et égalité stricte :
+
+- l'égalité simple vérifie la valeur, mais pas le type. Donc ceci renvoie la valeur  `true`:
+`5 == "5"`
+- par contre, l'égalité stricte vérifie à la fois la valeur et le type. Donc :`5 === "5"`renvoie  `false`, car on compare un  `number` à un  `string`.
+
+De même, il y a 2  opérateurs d'inégalité  `!=` et  `!==`, avec la même distinction.
