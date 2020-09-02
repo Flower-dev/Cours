@@ -358,3 +358,67 @@ Il y a 2 façons de vérifier si 2 valeurs sont égales en JavaScript :  `==` et
 - par contre, l'égalité stricte vérifie à la fois la valeur et le type. Donc :`5 === "5"`renvoie  `false`, car on compare un  `number` à un  `string`.
 
 De même, il y a 2  opérateurs d'inégalité  `!=` et  `!==`, avec la même distinction.
+
+
+Les conditions dites multiples :
+
+- `&&` **ET** logique --> vérifier que si 2 conditions = **toutes les 2 vraies**
+- `||` **OU** logique -->  vérifier qu'**au moins 1 condition = vraie**
+- `!` **NON** logique --> vérifier si 1 condition n'est pas vraie
+
+exemple :
+
+```js
+let userLoggedIn = true;
+let userHasPremiumAccount = true;
+let userHasMegaPremiumAccount = false;
+
+userLoggedIn && userHasPremiumAccount; // true
+userLoggedIn && userHasMegaPremiumAccount; // false
+
+userLoggedIn || userHasPremiumAccount; // true
+userLoggedIn || userHasMegaPremiumAccount; // true
+
+!userLoggedIn; // false
+!userHasMegaPremiumAccount; // true
+```
+
+Un bloc de code ou bloc = une section de code incluse entre accolades  `{}`.
+
+Pour que le code fonctionne correctement, il faut déclarer les variables au début puis écrire en dessous les conditions avec `If`/`Else`
+
+exemple :
+
+```js
+let userLoggedIn = true;
+let welcomeMessage = ''; // déclarer la variable ici
+
+if (userLoggedIn) {
+    welcomeMessage = 'Welcome back!'; // modifier la variable extérieure
+} else {
+    welcomeMessage = 'Welcome new user!'; // modifier la variable extérieure
+}
+
+console.log(welcomeMessage); // imprime 'Welcome back!'
+```
+
+La variable = déclarée dans le scope parent, elle = disponible partout, accessible et peut être modifiée correctement.
+
+
+Pour vérifier une variable, il est possible d'utiliser l'instruction `switch`
+
+## Les boucles For & While
+
+La boucle `For` permet de savoir "combien de fois ?"
+
+Pour commencer, il faut déclarer une variable, par exemple le nombre de passagers puis créer une variable d'indice `i` permettant de compter le nombre d'exécutions de la boucle (:warning: **il faut commencer à 0**). La deuxième condition à mettre dans la boucle `for` = **tant que i < au nombre de passagers alors continuer**. La dernière condition à ajouter = si i < au nombre de passagers alors passer au suivant (i++)
+
+En code cela donne :
+
+```js
+const numberOfPassengers = 10;
+
+for (let i = 0; i < numberOfPassengers; i++) {
+    console.log("Passager embarqué !");
+}
+```
