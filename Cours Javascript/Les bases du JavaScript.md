@@ -422,3 +422,20 @@ for (let i = 0; i < numberOfPassengers; i++) {
     console.log("Passager embarqué !");
 }
 ```
+
+**Les tableaux `for`...`of` & `for`...`in`**
+
+La boucle  `for`  …  `in` est très comparable à l'exemple de boucle  for  normale, mais elle est plus facile à lire, et effectue tout le travail d'itération :
+
+```js
+const passengers = [
+    "Will Alexander",
+    "Sarah Kate'",
+    "Audrey Simon",
+    "Tao Perkington"
+]
+
+for (let i in passengers) {
+    console.log("Embarquement du passager " + passengers[i]);
+}
+```
