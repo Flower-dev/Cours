@@ -425,7 +425,7 @@ for (let i = 0; i < numberOfPassengers; i++) {
 
 **Les tableaux `for`...`of` & `for`...`in`**
 
-La boucle  `for`  …  `in` est très comparable à l'exemple de boucle  for  normale, mais elle est plus facile à lire, et effectue tout le travail d'itération :
+La boucle  `for`  …  `in` est très comparable à l'exemple de boucle  `for` normale, mais elle est plus facile à lire, et effectue tout le travail d'itération :
 
 ```js
 const passengers = [
@@ -439,3 +439,71 @@ for (let i in passengers) {
     console.log("Embarquement du passager " + passengers[i]);
 }
 ```
+
+La boucle `for`...`of` = utilisé quand l'indice précis d'un élément n'est pas nécessaire pendant l'itération ce qui donne en code :
+
+```js
+const passengers = [
+    "Will Alexander",
+    "Sarah Kate",
+    "Audrey Simon",
+    "Tao Perkington"
+]
+
+for (let passenger of passengers) {
+    console.log("Embarquement du passager " + passenger);
+}
+```
+
+on obtient le même résultat que précédemment mais de manière beaucoup plus lisible. C'est encore plus utile si le tableau est un peu plus complexe et contient par exemple des objets :
+
+```js
+const passengers = [
+    {
+        name: "Will Alexander",
+        ticketNumber: 209542
+    },
+    {
+        name: "Sarah Kate",
+        ticketNumber: 169336
+    },
+    {
+        name: "Audrey Simon",
+        ticketNumber: 779042
+    },
+    {
+        name: "Tao Perkington",
+        ticketNumber: 703911
+    }
+]
+
+for (let passenger of passengers) {
+    console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);
+}
+```
+
+
+La boucle `while` permet de continuer jusqu'à ce que l'on demande d'arrêter
+
+Cette boucle permet de vérifier si une condition = vraie. Si cela = le cas, la boucle se poursuit sinon elle s'arrête
+
+Voici un exemple :
+
+```js
+let seatsLeft = 10;
+let passengersStillToBoard = 8;
+
+let passengersBoarded = 0;
+
+while (seatsLeft > 0 && passengersStillToBoard > 0) {
+    passengersBoarded++; // un passager embarque
+    passengersStillToBoard--; // donc il y a un passager de moins à embarquer
+    seatsLeft--; // et un siège de moins
+}
+
+console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 sièges
+```
+
+Dans cet exemple, la boucle `while` poursuit son exécution jusqu'à ce que l'un des nombres  `seatsLeft` et  `passengersStillToBoard`   atteigne zéro, et à ce point elle se termine.
+
+Pour résumer, la boucle `for` = utilisée quand le nombre d'itérations = fixe et la boucle `while`= utilisée quand le nombre d'itérations nécessaire = inconnu.
