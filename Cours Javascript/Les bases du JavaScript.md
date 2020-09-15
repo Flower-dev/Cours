@@ -507,3 +507,97 @@ console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 si�
 Dans cet exemple, la boucle `while` poursuit son exécution jusqu'à ce que l'un des nombres  `seatsLeft` et  `passengersStillToBoard`   atteigne zéro, et à ce point elle se termine.
 
 Pour résumer, la boucle `for` = utilisée quand le nombre d'itérations = fixe et la boucle `while`= utilisée quand le nombre d'itérations nécessaire = inconnu.
+
+
+## Les fonctions en JavaScript
+
+1 fonction = un bloc de code auquel on attribut 1 nom. Lorsqu'elle = appelée, le code qu'elle contient = exécuté.
+
+Quand on crée une fonction (déclare), il faut indiquer la liste des variables dont elle a besoin (définition des paramètres de la fonction). Ensuite, lorsqu'elle est appelée, il faut lui passer des valeurs pour ses paramètres (les valeurs = des arguments d'appel). A la fin, la fonction peut donner une valeur de retour (résultat)
+
+Par exemple, s'il on souhaite écrire une fonction pour additionner des nombres entre eux, on peut écrire les choses de la manière suivante :
+
+```js
+const add = (firstNumber, secondNumber) => {
+  const result = firstNumber + secondNumber;
+  return result;
+}
+
+  ou
+
+  const add = (firstNumber, secondNumber) => {
+    return firstNumber + secondNumber;
+}
+
+pour appeler la fonction add il faut faire :
+
+const result = add (4,7);
+console.log(result);
+```
+
+Il est possible de créer des fonctions qui manipulent des objets et des tableaux. Les variables qui contiennent des nombres, des chaînes et des valeurs logiques contiennent effectivement des valeurs, mais celles qui sont affectées à des objets ; les tableaux contiennent leur référence plutôt que les valeurs elles-mêmes.
+
+Les méthodes d'instance = des fonctions d'une classe et qui agissent sur l'instance d'une classe
+
+```js
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    showBalance() {
+        console.log("Solde: " + this.balance + " EUR");
+    }
+
+    deposit(amount) {
+        console.log("Dépôt de " + amount + " EUR");
+        this.balance += amount;
+        this.showBalance();
+    }
+
+    withdraw(amount) {
+        if (amount > this.balance) {
+            console.log("Retrait refusé !");
+        } else {
+            console.log("Retrait de " + amount + " EUR");
+            this.balance -= amount;
+            this.showBalance();
+        }
+    }
+}
+```
+
+
+La refactorisation du code consiste à modifier la structure d'un élément de code sans changer son comportement.
+
+
+Une fonction récursive = une fonction qui s'appelle elle meme
+
+exemple :
+
+```js
+const binarySearch = (array, thingToFind, start, end) => {
+
+    if (start > end) {
+        return false;
+    }
+
+    let mid = Math.floor((start + end) / 2);
+
+    if (array[mid] === thingToFind) {
+        return true;
+    }
+
+    if (thingToFind < array[mid]) {
+        return binarySearch(array, thingToFind, start, mid - 1);
+    } else {
+        return binarySearch(array, thingToFind, mid + 1, end);
+    }
+}
+```
+
+
+
+
+A garder en tête, il est préférable se place son code en JavaScript avant la fin de la balise <body> afin que les vieux navigateurs ne chargent pas le JavaScript avant le contenu de la page Web.
