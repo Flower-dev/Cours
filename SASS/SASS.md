@@ -14,7 +14,7 @@ MOTS IMPORTANTS :
 - NESTING = Structurer le code en le hiérarchisant
 - IDE = Intergrated Development Environment (équivaut à un traitement de texte)
 
-La compilation = 1 processus permettant de transformer le SASS ou du moins le `.scss` en `.css`
+La compilation = 1 processus permettant de transformer le SASS ou du moins le `.scss` en `.css` pour se faire, il faut taper la commande suivante dans son terminal : ```sass scss/index.scss css/index.css``
 
 Pour écrire du SASS il existe deux extensions de fichier le `.sass` et le `.scss` (ce dernier est beaucoup plus utilisé)
 
