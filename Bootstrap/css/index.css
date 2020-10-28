@@ -1,0 +1,42 @@
+html body {
+  margin: 0, 0, 0, 0;
+  padding: 0, 0, 0, 0;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h5 {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.center p {
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  font-size: 30;
+  text-align: center;
+  width: 100%;
+  float: center;
+}
+
+/*# sourceMappingURL=index.css.map */

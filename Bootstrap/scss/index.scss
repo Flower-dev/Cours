@@ -1,0 +1,38 @@
+html body{
+  margin: 0,0,0,0;
+  padding:0,0,0,0;
+}
+
+@mixin typography{
+  font-family: "Lato", sans-serif;
+  text-align: justify;
+  letter-spacing: 1.5px;
+}
+
+p{
+  @include typography;
+  font-size: 15px;
+}
+
+h1{
+  @include typography;
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h5{
+  @include typography;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.center p{
+  @include typography;
+  font-size: 30;
+  text-align: center;
+  width: 100%;
+  float: center;
+}
