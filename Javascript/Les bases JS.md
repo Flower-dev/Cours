@@ -1,8 +1,8 @@
 # Les bases du JavaScript
 
-1 variable permet de garder en mémoire 1 valeur. Il faut la déclarer avec `var`
+1 variable permet de garder en mémoire 1 valeur. Il faut la déclarer avec le mot clef `var`
 
-une variable peut changer de valeur &  de type au cours de l'exécution de l'algorithme. 
+une variable peut changer de valeur & de type au cours de l'exécution de l'algorithme. 
 
 ## Les types de variables : 
 
@@ -202,7 +202,19 @@ var saluer = function (nom) {
     return "Salut " + nom
 }
 ```
+Il est possible de stocker une fonction dans la propriété d'un objet, on nomme cela une méthode exemple : 
 
+```js
+var eleve = {
+    nom: 'Marc',
+    note: 14,
+    present: function () {
+        return 'Je suis présent'
+    }
+}
+
+eleve.present() // 'Je suis présent'
+```
 
 
 
